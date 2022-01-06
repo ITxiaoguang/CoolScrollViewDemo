@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/motionLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundMain">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsv_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="276dp"
+                android:background="@null">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/ic_bg_home"
+                    tools:ignore="ContentDescription" />
+
+                <ImageView
+                    android:id="@+id/iv_home_bg_black"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:alpha="0"
+                    android:background="@drawable/ic_bg_home_black"
+                    tools:ignore="ContentDescription" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-83dp"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="612dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="4dp"
+                    app:cardCornerRadius="6dp"
+                    app:cardElevation="2dp">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_home_add_device"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:drawableTop="@drawable/ic_home_add_device"
+                            android:drawablePadding="8dp"
+                            android:gravity="center"
+                            android:text="添加设备"
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+<!--                <androidx.recyclerview.widget.RecyclerView-->
+<!--                    android:id="@+id/rv_home_device"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="4dp"-->
+<!--                    android:layout_marginEnd="4dp" />-->
+
+            </LinearLayout>
+
+
+            <!--            <LinearLayout-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:background="@null"-->
+            <!--                android:orientation="horizontal">-->
+
+            <!--                <androidx.cardview.widget.CardView-->
+            <!--                    android:layout_width="0dp"-->
+            <!--                    android:layout_height="176dp"-->
+            <!--                    android:layout_marginStart="8dp"-->
+            <!--                    android:layout_marginLeft="8dp"-->
+            <!--                    android:layout_marginTop="4dp"-->
+            <!--                    android:layout_marginBottom="4dp"-->
+            <!--                    android:layout_weight="1"-->
+            <!--                    app:cardCornerRadius="6dp"-->
+            <!--                    app:cardElevation="1dp">-->
+
+            <!--                    <RelativeLayout-->
+            <!--                        android:layout_width="match_parent"-->
+            <!--                        android:layout_height="match_parent"-->
+            <!--                        android:layout_marginTop="8dp">-->
+
+            <!--                        <ImageView-->
+            <!--                            android:layout_width="96dp"-->
+            <!--                            android:layout_height="82dp"-->
+            <!--                            android:layout_marginStart="14dp"-->
+            <!--                            android:layout_marginLeft="14dp"-->
+            <!--                            android:layout_marginTop="12dp"-->
+            <!--                            android:background="@mipmap/ic_launcher" />-->
+
+            <!--                        <View-->
+            <!--                            android:layout_width="8dp"-->
+            <!--                            android:layout_height="8dp"-->
+            <!--                            android:layout_alignParentBottom="true"-->
+            <!--                            android:layout_marginStart="14dp"-->
+            <!--                            android:layout_marginLeft="14dp"-->
+            <!--                            android:layout_marginBottom="46dp"-->
+            <!--                            android:background="@drawable/shape_dot_accent_radius_4" />-->
+
+            <!--                        <TextView-->
+            <!--                            android:layout_width="wrap_content"-->
+            <!--                            android:layout_height="wrap_content"-->
+            <!--                            android:layout_alignParentBottom="true"-->
+            <!--                            android:layout_marginStart="28dp"-->
+            <!--                            android:layout_marginLeft="28dp"-->
+            <!--                            android:layout_marginBottom="40dp"-->
+            <!--                            android:text="Baby monitor"-->
+            <!--                            android:textColor="@color/textColor"-->
+            <!--                            android:textSize="16sp" />-->
+
+            <!--                        <TextView-->
+            <!--                            android:layout_width="wrap_content"-->
+            <!--                            android:layout_height="wrap_content"-->
+            <!--                            android:layout_alignParentBottom="true"-->
+            <!--                            android:layout_marginStart="28dp"-->
+            <!--                            android:layout_marginLeft="28dp"-->
+            <!--                            android:layout_marginBottom="14dp"-->
+            <!--                            android:text="living"-->
+            <!--                            android:textColor="@color/textColor"-->
+            <!--                            android:textSize="14sp" />-->
+
+            <!--                        <com.bestergo.common.widget.view.SwitchButton-->
+            <!--                            android:layout_width="36dp"-->
+            <!--                            android:layout_height="24dp"-->
+            <!--                            android:layout_alignParentEnd="true"-->
+            <!--                            android:layout_alignParentRight="true"-->
+            <!--                            android:layout_alignParentBottom="true"-->
+            <!--                            android:layout_marginEnd="14dp"-->
+            <!--                            android:layout_marginRight="14dp"-->
+            <!--                            android:layout_marginBottom="16dp"-->
+            <!--                            app:sb_checked="true" />-->
+
+            <!--                    </RelativeLayout>-->
+
+            <!--                </androidx.cardview.widget.CardView>-->
+
+            <!--                <Space-->
+            <!--                    android:layout_width="8dp"-->
+            <!--                    android:layout_height="0dp" />-->
+
+            <!--                <androidx.cardview.widget.CardView-->
+            <!--                    android:layout_width="0dp"-->
+            <!--                    android:layout_height="176dp"-->
+            <!--                    android:layout_marginTop="4dp"-->
+            <!--                    android:layout_marginEnd="8dp"-->
+            <!--                    android:layout_marginRight="8dp"-->
+            <!--                    android:layout_marginBottom="4dp"-->
+            <!--                    android:layout_weight="1"-->
+            <!--                    app:cardCornerRadius="6dp"-->
+            <!--                    app:cardElevation="1dp">-->
+
+            <!--                    <RelativeLayout-->
+            <!--                        android:layout_width="match_parent"-->
+            <!--                        android:layout_height="match_parent"-->
+            <!--                        android:layout_marginTop="8dp">-->
+
+            <!--                        <ImageView-->
+            <!--                            android:layout_width="96dp"-->
+            <!--                            android:layout_height="82dp"-->
+            <!--                            android:layout_marginStart="14dp"-->
+            <!--                            android:layout_marginLeft="14dp"-->
+            <!--                            android:layout_marginTop="12dp"-->
+            <!--                            android:background="@mipmap/ic_launcher" />-->
+
+            <!--                        <View-->
+            <!--                            android:layout_width="8dp"-->
+            <!--                            android:layout_height="8dp"-->
+            <!--                            android:layout_alignParentBottom="true"-->
+            <!--                            android:layout_marginStart="14dp"-->
+            <!--                            android:layout_marginLeft="14dp"-->
+            <!--                            android:layout_marginBottom="46dp"-->
+            <!--                            android:background="@drawable/shape_dot_gray_radius_4" />-->
+
+            <!--                        <TextView-->
+            <!--                            android:layout_width="wrap_content"-->
+            <!--                            android:layout_height="wrap_content"-->
+            <!--                            android:layout_alignParentBottom="true"-->
+            <!--                            android:layout_marginStart="28dp"-->
+            <!--                            android:layout_marginLeft="28dp"-->
+            <!--                            android:layout_marginBottom="40dp"-->
+            <!--                            android:text="Baby monitor"-->
+            <!--                            android:textColor="@color/textColor"-->
+            <!--                            android:textSize="16sp" />-->
+
+            <!--                        <TextView-->
+            <!--                            android:layout_width="wrap_content"-->
+            <!--                            android:layout_height="wrap_content"-->
+            <!--                            android:layout_alignParentBottom="true"-->
+            <!--                            android:layout_marginStart="28dp"-->
+            <!--                            android:layout_marginLeft="28dp"-->
+            <!--                            android:layout_marginBottom="14dp"-->
+            <!--                            android:text="living"-->
+            <!--                            android:textColor="@color/textColor"-->
+            <!--                            android:textSize="14sp" />-->
+
+            <!--                        <com.bestergo.common.widget.view.SwitchButton-->
+            <!--                            android:layout_width="36dp"-->
+            <!--                            android:layout_height="24dp"-->
+            <!--                            android:layout_alignParentEnd="true"-->
+            <!--                            android:layout_alignParentRight="true"-->
+            <!--                            android:layout_alignParentBottom="true"-->
+            <!--                            android:layout_marginEnd="14dp"-->
+            <!--                            android:layout_marginRight="14dp"-->
+            <!--                            android:layout_marginBottom="16dp" />-->
+
+            <!--                    </RelativeLayout>-->
+
+            <!--                </androidx.cardview.widget.CardView>-->
+            <!--            </LinearLayout>-->
+
+            <!--            <LinearLayout-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:background="@null"-->
+            <!--                android:orientation="horizontal">-->
+
+            <!--                <androidx.cardview.widget.CardView-->
+            <!--                    android:layout_width="0dp"-->
+            <!--                    android:layout_height="176dp"-->
+            <!--                    android:layout_marginStart="8dp"-->
+            <!--                    android:layout_marginLeft="8dp"-->
+            <!--                    android:layout_marginTop="4dp"-->
+            <!--                    android:layout_marginBottom="4dp"-->
+            <!--                    android:layout_weight="1"-->
+            <!--                    app:cardCornerRadius="6dp"-->
+            <!--                    app:cardElevation="1dp">-->
+
+            <!--                    <RelativeLayout-->
+            <!--                        android:layout_width="match_parent"-->
+            <!--                        android:layout_height="match_parent"-->
+            <!--                        android:layout_marginTop="8dp">-->
+
+            <!--                        <ImageView-->
+            <!--                            android:layout_width="96dp"-->
+            <!--                            android:layout_height="82dp"-->
+            <!--                            android:layout_marginStart="14dp"-->
+            <!--                            android:layout_marginLeft="14dp"-->
+            <!--                            android:layout_marginTop="12dp"-->
+            <!--                            android:background="@mipmap/ic_launcher" />-->
+
+            <!--                        <View-->
+            <!--                            android:layout_width="8dp"-->
+            <!--                            android:layout_height="8dp"-->
+            <!--                            android:layout_alignParentBottom="true"-->
+            <!--                            android:layout_marginStart="14dp"-->
+            <!--                            android:layout_marginLeft="14dp"-->
+            <!--                            android:layout_marginBottom="46dp"-->
+            <!--                            android:background="@drawable/shape_dot_accent_radius_4" />-->
+
+            <!--                        <TextView-->
+            <!--                            android:layout_width="wrap_content"-->
+            <!--                            android:layout_height="wrap_content"-->
+            <!--                            android:layout_alignParentBottom="true"-->
+            <!--                            android:layout_marginStart="28dp"-->
+            <!--                            android:layout_marginLeft="28dp"-->
+            <!--                            android:layout_marginBottom="40dp"-->
+            <!--                            android:text="Baby monitor"-->
+            <!--                            android:textColor="@color/textColor"-->
+            <!--                            android:textSize="16sp" />-->
+
+            <!--                        <TextView-->
+            <!--                            android:layout_width="wrap_content"-->
+            <!--                            android:layout_height="wrap_content"-->
+            <!--                            android:layout_alignParentBottom="true"-->
+            <!--                            android:layout_marginStart="28dp"-->
+            <!--                            android:layout_marginLeft="28dp"-->
+            <!--                            android:layout_marginBottom="14dp"-->
+            <!--                            android:text="living"-->
+            <!--                            android:textColor="@color/textColor"-->
+            <!--                            android:textSize="14sp" />-->
+
+            <!--                        <com.bestergo.common.widget.view.SwitchButton-->
+            <!--                            android:layout_width="36dp"-->
+            <!--                            android:layout_height="24dp"-->
+            <!--                            android:layout_alignParentEnd="true"-->
+            <!--                            android:layout_alignParentRight="true"-->
+            <!--                            android:layout_alignParentBottom="true"-->
+            <!--                            android:layout_marginEnd="14dp"-->
+            <!--                            android:layout_marginRight="14dp"-->
+            <!--                            android:layout_marginBottom="16dp"-->
+            <!--                            app:sb_checked="true" />-->
+
+            <!--                    </RelativeLayout>-->
+
+            <!--                </androidx.cardview.widget.CardView>-->
+
+            <!--                <Space-->
+            <!--                    android:layout_width="8dp"-->
+            <!--                    android:layout_height="0dp" />-->
+
+            <!--                <androidx.cardview.widget.CardView-->
+            <!--                    android:layout_width="0dp"-->
+            <!--                    android:layout_height="176dp"-->
+            <!--                    android:layout_marginTop="4dp"-->
+            <!--                    android:layout_marginEnd="8dp"-->
+            <!--                    android:layout_marginRight="8dp"-->
+            <!--                    android:layout_marginBottom="4dp"-->
+            <!--                    android:layout_weight="1"-->
+            <!--                    app:cardCornerRadius="6dp"-->
+            <!--                    app:cardElevation="1dp">-->
+
+            <!--                    <RelativeLayout-->
+            <!--                        android:layout_width="match_parent"-->
+            <!--                        android:layout_height="match_parent"-->
+            <!--                        android:layout_marginTop="8dp">-->
+
+            <!--                        <ImageView-->
+            <!--                            android:layout_width="96dp"-->
+            <!--                            android:layout_height="82dp"-->
+            <!--                            android:layout_marginStart="14dp"-->
+            <!--                            android:layout_marginLeft="14dp"-->
+            <!--                            android:layout_marginTop="12dp"-->
+            <!--                            android:background="@mipmap/ic_launcher" />-->
+
+            <!--                        <View-->
+            <!--                            android:layout_width="8dp"-->
+            <!--                            android:layout_height="8dp"-->
+            <!--                            android:layout_alignParentBottom="true"-->
+            <!--                            android:layout_marginStart="14dp"-->
+            <!--                            android:layout_marginLeft="14dp"-->
+            <!--                            android:layout_marginBottom="46dp"-->
+            <!--                            android:background="@drawable/shape_dot_gray_radius_4" />-->
+
+            <!--                        <TextView-->
+            <!--                            android:layout_width="wrap_content"-->
+            <!--                            android:layout_height="wrap_content"-->
+            <!--                            android:layout_alignParentBottom="true"-->
+            <!--                            android:layout_marginStart="28dp"-->
+            <!--                            android:layout_marginLeft="28dp"-->
+            <!--                            android:layout_marginBottom="40dp"-->
+            <!--                            android:text="Baby monitor"-->
+            <!--                            android:textColor="@color/textColor"-->
+            <!--                            android:textSize="16sp" />-->
+
+            <!--                        <TextView-->
+            <!--                            android:layout_width="wrap_content"-->
+            <!--                            android:layout_height="wrap_content"-->
+            <!--                            android:layout_alignParentBottom="true"-->
+            <!--                            android:layout_marginStart="28dp"-->
+            <!--                            android:layout_marginLeft="28dp"-->
+            <!--                            android:layout_marginBottom="14dp"-->
+            <!--                            android:text="living"-->
+            <!--                            android:textColor="@color/textColor"-->
+            <!--                            android:textSize="14sp" />-->
+
+            <!--                        <com.bestergo.common.widget.view.SwitchButton-->
+            <!--                            android:layout_width="36dp"-->
+            <!--                            android:layout_height="24dp"-->
+            <!--                            android:layout_alignParentEnd="true"-->
+            <!--                            android:layout_alignParentRight="true"-->
+            <!--                            android:layout_alignParentBottom="true"-->
+            <!--                            android:layout_marginEnd="14dp"-->
+            <!--                            android:layout_marginRight="14dp"-->
+            <!--                            android:layout_marginBottom="16dp" />-->
+
+            <!--                    </RelativeLayout>-->
+
+            <!--                </androidx.cardview.widget.CardView>-->
+            <!--            </LinearLayout>-->
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="136dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="6dp"
+                app:cardElevation="0dp">
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="193dp"
+        android:background="@null">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null">
+
+            <View
+                android:id="@+id/v_title_bar"
+                android:layout_width="match_parent"
+                android:layout_height="69dp"
+                android:alpha="0"
+                android:background="@color/black" />
+
+            <RelativeLayout
+                android:id="@+id/rl_title_top"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                tools:layout_marginTop="25dp">
+
+                <ImageButton
+                    android:id="@+id/ib_home_title_notice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:background="@drawable/ripple_radius_48"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_home_title_notice"
+                    tools:ignore="ContentDescription" />
+
+                <ImageButton
+                    android:id="@+id/ib_home_title_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@drawable/ripple_radius_48"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_home_title_add"
+                    tools:ignore="ContentDescription" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <!-- shadow 加粗字体-->
+        <TextView
+            android:id="@+id/tv_home_device"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:shadowColor="@color/white"
+            android:shadowDx="0.8"
+            android:shadowDy="0.8"
+            android:shadowRadius="0.8"
+            android:text="添加设备"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            tools:layout_marginStart="24dp"
+            tools:layout_marginTop="83dp" />
+    </RelativeLayout>
+</RelativeLayout>

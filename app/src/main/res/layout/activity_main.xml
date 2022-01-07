@@ -10,8 +10,7 @@
     <androidx.core.widget.NestedScrollView
         android:id="@+id/nsv_home"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -29,6 +28,8 @@
                     android:background="@drawable/ic_bg_home"
                     tools:ignore="ContentDescription" />
 
+                <!-- 给图片加个蒙版，初始化全透明(alpha="0")
+                 往上滑动逐渐不透明 -->
                 <ImageView
                     android:id="@+id/iv_home_bg_black"
                     android:layout_width="match_parent"
@@ -39,6 +40,7 @@
 
             </RelativeLayout>
 
+            <!-- -83dp 视图穿透上去 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -47,355 +49,16 @@
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="612dp"
+                    android:layout_height="812dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginEnd="8dp"
-                    android:layout_marginBottom="4dp"
+                    android:layout_marginBottom="40dp"
                     app:cardCornerRadius="6dp"
                     app:cardElevation="2dp">
 
-                    <RelativeLayout
-                        android:id="@+id/rl_home_add_device"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@null">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerInParent="true"
-                            android:drawableTop="@drawable/ic_home_add_device"
-                            android:drawablePadding="8dp"
-                            android:gravity="center"
-                            android:text="添加设备"
-                            android:textColor="@color/black"
-                            android:textSize="14sp" />
-
-                    </RelativeLayout>
-
                 </androidx.cardview.widget.CardView>
 
-<!--                <androidx.recyclerview.widget.RecyclerView-->
-<!--                    android:id="@+id/rv_home_device"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_marginStart="4dp"-->
-<!--                    android:layout_marginEnd="4dp" />-->
-
             </LinearLayout>
-
-
-            <!--            <LinearLayout-->
-            <!--                android:layout_width="match_parent"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:background="@null"-->
-            <!--                android:orientation="horizontal">-->
-
-            <!--                <androidx.cardview.widget.CardView-->
-            <!--                    android:layout_width="0dp"-->
-            <!--                    android:layout_height="176dp"-->
-            <!--                    android:layout_marginStart="8dp"-->
-            <!--                    android:layout_marginLeft="8dp"-->
-            <!--                    android:layout_marginTop="4dp"-->
-            <!--                    android:layout_marginBottom="4dp"-->
-            <!--                    android:layout_weight="1"-->
-            <!--                    app:cardCornerRadius="6dp"-->
-            <!--                    app:cardElevation="1dp">-->
-
-            <!--                    <RelativeLayout-->
-            <!--                        android:layout_width="match_parent"-->
-            <!--                        android:layout_height="match_parent"-->
-            <!--                        android:layout_marginTop="8dp">-->
-
-            <!--                        <ImageView-->
-            <!--                            android:layout_width="96dp"-->
-            <!--                            android:layout_height="82dp"-->
-            <!--                            android:layout_marginStart="14dp"-->
-            <!--                            android:layout_marginLeft="14dp"-->
-            <!--                            android:layout_marginTop="12dp"-->
-            <!--                            android:background="@mipmap/ic_launcher" />-->
-
-            <!--                        <View-->
-            <!--                            android:layout_width="8dp"-->
-            <!--                            android:layout_height="8dp"-->
-            <!--                            android:layout_alignParentBottom="true"-->
-            <!--                            android:layout_marginStart="14dp"-->
-            <!--                            android:layout_marginLeft="14dp"-->
-            <!--                            android:layout_marginBottom="46dp"-->
-            <!--                            android:background="@drawable/shape_dot_accent_radius_4" />-->
-
-            <!--                        <TextView-->
-            <!--                            android:layout_width="wrap_content"-->
-            <!--                            android:layout_height="wrap_content"-->
-            <!--                            android:layout_alignParentBottom="true"-->
-            <!--                            android:layout_marginStart="28dp"-->
-            <!--                            android:layout_marginLeft="28dp"-->
-            <!--                            android:layout_marginBottom="40dp"-->
-            <!--                            android:text="Baby monitor"-->
-            <!--                            android:textColor="@color/textColor"-->
-            <!--                            android:textSize="16sp" />-->
-
-            <!--                        <TextView-->
-            <!--                            android:layout_width="wrap_content"-->
-            <!--                            android:layout_height="wrap_content"-->
-            <!--                            android:layout_alignParentBottom="true"-->
-            <!--                            android:layout_marginStart="28dp"-->
-            <!--                            android:layout_marginLeft="28dp"-->
-            <!--                            android:layout_marginBottom="14dp"-->
-            <!--                            android:text="living"-->
-            <!--                            android:textColor="@color/textColor"-->
-            <!--                            android:textSize="14sp" />-->
-
-            <!--                        <com.bestergo.common.widget.view.SwitchButton-->
-            <!--                            android:layout_width="36dp"-->
-            <!--                            android:layout_height="24dp"-->
-            <!--                            android:layout_alignParentEnd="true"-->
-            <!--                            android:layout_alignParentRight="true"-->
-            <!--                            android:layout_alignParentBottom="true"-->
-            <!--                            android:layout_marginEnd="14dp"-->
-            <!--                            android:layout_marginRight="14dp"-->
-            <!--                            android:layout_marginBottom="16dp"-->
-            <!--                            app:sb_checked="true" />-->
-
-            <!--                    </RelativeLayout>-->
-
-            <!--                </androidx.cardview.widget.CardView>-->
-
-            <!--                <Space-->
-            <!--                    android:layout_width="8dp"-->
-            <!--                    android:layout_height="0dp" />-->
-
-            <!--                <androidx.cardview.widget.CardView-->
-            <!--                    android:layout_width="0dp"-->
-            <!--                    android:layout_height="176dp"-->
-            <!--                    android:layout_marginTop="4dp"-->
-            <!--                    android:layout_marginEnd="8dp"-->
-            <!--                    android:layout_marginRight="8dp"-->
-            <!--                    android:layout_marginBottom="4dp"-->
-            <!--                    android:layout_weight="1"-->
-            <!--                    app:cardCornerRadius="6dp"-->
-            <!--                    app:cardElevation="1dp">-->
-
-            <!--                    <RelativeLayout-->
-            <!--                        android:layout_width="match_parent"-->
-            <!--                        android:layout_height="match_parent"-->
-            <!--                        android:layout_marginTop="8dp">-->
-
-            <!--                        <ImageView-->
-            <!--                            android:layout_width="96dp"-->
-            <!--                            android:layout_height="82dp"-->
-            <!--                            android:layout_marginStart="14dp"-->
-            <!--                            android:layout_marginLeft="14dp"-->
-            <!--                            android:layout_marginTop="12dp"-->
-            <!--                            android:background="@mipmap/ic_launcher" />-->
-
-            <!--                        <View-->
-            <!--                            android:layout_width="8dp"-->
-            <!--                            android:layout_height="8dp"-->
-            <!--                            android:layout_alignParentBottom="true"-->
-            <!--                            android:layout_marginStart="14dp"-->
-            <!--                            android:layout_marginLeft="14dp"-->
-            <!--                            android:layout_marginBottom="46dp"-->
-            <!--                            android:background="@drawable/shape_dot_gray_radius_4" />-->
-
-            <!--                        <TextView-->
-            <!--                            android:layout_width="wrap_content"-->
-            <!--                            android:layout_height="wrap_content"-->
-            <!--                            android:layout_alignParentBottom="true"-->
-            <!--                            android:layout_marginStart="28dp"-->
-            <!--                            android:layout_marginLeft="28dp"-->
-            <!--                            android:layout_marginBottom="40dp"-->
-            <!--                            android:text="Baby monitor"-->
-            <!--                            android:textColor="@color/textColor"-->
-            <!--                            android:textSize="16sp" />-->
-
-            <!--                        <TextView-->
-            <!--                            android:layout_width="wrap_content"-->
-            <!--                            android:layout_height="wrap_content"-->
-            <!--                            android:layout_alignParentBottom="true"-->
-            <!--                            android:layout_marginStart="28dp"-->
-            <!--                            android:layout_marginLeft="28dp"-->
-            <!--                            android:layout_marginBottom="14dp"-->
-            <!--                            android:text="living"-->
-            <!--                            android:textColor="@color/textColor"-->
-            <!--                            android:textSize="14sp" />-->
-
-            <!--                        <com.bestergo.common.widget.view.SwitchButton-->
-            <!--                            android:layout_width="36dp"-->
-            <!--                            android:layout_height="24dp"-->
-            <!--                            android:layout_alignParentEnd="true"-->
-            <!--                            android:layout_alignParentRight="true"-->
-            <!--                            android:layout_alignParentBottom="true"-->
-            <!--                            android:layout_marginEnd="14dp"-->
-            <!--                            android:layout_marginRight="14dp"-->
-            <!--                            android:layout_marginBottom="16dp" />-->
-
-            <!--                    </RelativeLayout>-->
-
-            <!--                </androidx.cardview.widget.CardView>-->
-            <!--            </LinearLayout>-->
-
-            <!--            <LinearLayout-->
-            <!--                android:layout_width="match_parent"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:background="@null"-->
-            <!--                android:orientation="horizontal">-->
-
-            <!--                <androidx.cardview.widget.CardView-->
-            <!--                    android:layout_width="0dp"-->
-            <!--                    android:layout_height="176dp"-->
-            <!--                    android:layout_marginStart="8dp"-->
-            <!--                    android:layout_marginLeft="8dp"-->
-            <!--                    android:layout_marginTop="4dp"-->
-            <!--                    android:layout_marginBottom="4dp"-->
-            <!--                    android:layout_weight="1"-->
-            <!--                    app:cardCornerRadius="6dp"-->
-            <!--                    app:cardElevation="1dp">-->
-
-            <!--                    <RelativeLayout-->
-            <!--                        android:layout_width="match_parent"-->
-            <!--                        android:layout_height="match_parent"-->
-            <!--                        android:layout_marginTop="8dp">-->
-
-            <!--                        <ImageView-->
-            <!--                            android:layout_width="96dp"-->
-            <!--                            android:layout_height="82dp"-->
-            <!--                            android:layout_marginStart="14dp"-->
-            <!--                            android:layout_marginLeft="14dp"-->
-            <!--                            android:layout_marginTop="12dp"-->
-            <!--                            android:background="@mipmap/ic_launcher" />-->
-
-            <!--                        <View-->
-            <!--                            android:layout_width="8dp"-->
-            <!--                            android:layout_height="8dp"-->
-            <!--                            android:layout_alignParentBottom="true"-->
-            <!--                            android:layout_marginStart="14dp"-->
-            <!--                            android:layout_marginLeft="14dp"-->
-            <!--                            android:layout_marginBottom="46dp"-->
-            <!--                            android:background="@drawable/shape_dot_accent_radius_4" />-->
-
-            <!--                        <TextView-->
-            <!--                            android:layout_width="wrap_content"-->
-            <!--                            android:layout_height="wrap_content"-->
-            <!--                            android:layout_alignParentBottom="true"-->
-            <!--                            android:layout_marginStart="28dp"-->
-            <!--                            android:layout_marginLeft="28dp"-->
-            <!--                            android:layout_marginBottom="40dp"-->
-            <!--                            android:text="Baby monitor"-->
-            <!--                            android:textColor="@color/textColor"-->
-            <!--                            android:textSize="16sp" />-->
-
-            <!--                        <TextView-->
-            <!--                            android:layout_width="wrap_content"-->
-            <!--                            android:layout_height="wrap_content"-->
-            <!--                            android:layout_alignParentBottom="true"-->
-            <!--                            android:layout_marginStart="28dp"-->
-            <!--                            android:layout_marginLeft="28dp"-->
-            <!--                            android:layout_marginBottom="14dp"-->
-            <!--                            android:text="living"-->
-            <!--                            android:textColor="@color/textColor"-->
-            <!--                            android:textSize="14sp" />-->
-
-            <!--                        <com.bestergo.common.widget.view.SwitchButton-->
-            <!--                            android:layout_width="36dp"-->
-            <!--                            android:layout_height="24dp"-->
-            <!--                            android:layout_alignParentEnd="true"-->
-            <!--                            android:layout_alignParentRight="true"-->
-            <!--                            android:layout_alignParentBottom="true"-->
-            <!--                            android:layout_marginEnd="14dp"-->
-            <!--                            android:layout_marginRight="14dp"-->
-            <!--                            android:layout_marginBottom="16dp"-->
-            <!--                            app:sb_checked="true" />-->
-
-            <!--                    </RelativeLayout>-->
-
-            <!--                </androidx.cardview.widget.CardView>-->
-
-            <!--                <Space-->
-            <!--                    android:layout_width="8dp"-->
-            <!--                    android:layout_height="0dp" />-->
-
-            <!--                <androidx.cardview.widget.CardView-->
-            <!--                    android:layout_width="0dp"-->
-            <!--                    android:layout_height="176dp"-->
-            <!--                    android:layout_marginTop="4dp"-->
-            <!--                    android:layout_marginEnd="8dp"-->
-            <!--                    android:layout_marginRight="8dp"-->
-            <!--                    android:layout_marginBottom="4dp"-->
-            <!--                    android:layout_weight="1"-->
-            <!--                    app:cardCornerRadius="6dp"-->
-            <!--                    app:cardElevation="1dp">-->
-
-            <!--                    <RelativeLayout-->
-            <!--                        android:layout_width="match_parent"-->
-            <!--                        android:layout_height="match_parent"-->
-            <!--                        android:layout_marginTop="8dp">-->
-
-            <!--                        <ImageView-->
-            <!--                            android:layout_width="96dp"-->
-            <!--                            android:layout_height="82dp"-->
-            <!--                            android:layout_marginStart="14dp"-->
-            <!--                            android:layout_marginLeft="14dp"-->
-            <!--                            android:layout_marginTop="12dp"-->
-            <!--                            android:background="@mipmap/ic_launcher" />-->
-
-            <!--                        <View-->
-            <!--                            android:layout_width="8dp"-->
-            <!--                            android:layout_height="8dp"-->
-            <!--                            android:layout_alignParentBottom="true"-->
-            <!--                            android:layout_marginStart="14dp"-->
-            <!--                            android:layout_marginLeft="14dp"-->
-            <!--                            android:layout_marginBottom="46dp"-->
-            <!--                            android:background="@drawable/shape_dot_gray_radius_4" />-->
-
-            <!--                        <TextView-->
-            <!--                            android:layout_width="wrap_content"-->
-            <!--                            android:layout_height="wrap_content"-->
-            <!--                            android:layout_alignParentBottom="true"-->
-            <!--                            android:layout_marginStart="28dp"-->
-            <!--                            android:layout_marginLeft="28dp"-->
-            <!--                            android:layout_marginBottom="40dp"-->
-            <!--                            android:text="Baby monitor"-->
-            <!--                            android:textColor="@color/textColor"-->
-            <!--                            android:textSize="16sp" />-->
-
-            <!--                        <TextView-->
-            <!--                            android:layout_width="wrap_content"-->
-            <!--                            android:layout_height="wrap_content"-->
-            <!--                            android:layout_alignParentBottom="true"-->
-            <!--                            android:layout_marginStart="28dp"-->
-            <!--                            android:layout_marginLeft="28dp"-->
-            <!--                            android:layout_marginBottom="14dp"-->
-            <!--                            android:text="living"-->
-            <!--                            android:textColor="@color/textColor"-->
-            <!--                            android:textSize="14sp" />-->
-
-            <!--                        <com.bestergo.common.widget.view.SwitchButton-->
-            <!--                            android:layout_width="36dp"-->
-            <!--                            android:layout_height="24dp"-->
-            <!--                            android:layout_alignParentEnd="true"-->
-            <!--                            android:layout_alignParentRight="true"-->
-            <!--                            android:layout_alignParentBottom="true"-->
-            <!--                            android:layout_marginEnd="14dp"-->
-            <!--                            android:layout_marginRight="14dp"-->
-            <!--                            android:layout_marginBottom="16dp" />-->
-
-            <!--                    </RelativeLayout>-->
-
-            <!--                </androidx.cardview.widget.CardView>-->
-            <!--            </LinearLayout>-->
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="136dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginBottom="12dp"
-                app:cardCornerRadius="6dp"
-                app:cardElevation="0dp">
-
-            </androidx.cardview.widget.CardView>
 
         </LinearLayout>
 
@@ -411,6 +74,7 @@
             android:layout_height="wrap_content"
             android:background="@null">
 
+            <!-- 标题栏 划到临界点变全黑 -->
             <View
                 android:id="@+id/v_title_bar"
                 android:layout_width="match_parent"
@@ -454,14 +118,14 @@
 
         <!-- shadow 加粗字体-->
         <TextView
-            android:id="@+id/tv_home_device"
+            android:id="@+id/tv_home"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:shadowColor="@color/white"
             android:shadowDx="0.8"
             android:shadowDy="0.8"
             android:shadowRadius="0.8"
-            android:text="添加设备"
+            android:text="炫酷ScrollView"
             android:textColor="@color/white"
             android:textSize="28sp"
             tools:layout_marginStart="24dp"
